@@ -1,0 +1,105 @@
+.vertical-heading-container {
+    display: inline; /* Ensures the container takes the width of the content */
+    align-items: center;
+    justify-content: auto;
+    height: 10vh; /* Full viewport height */
+  }
+  
+  .vertical-heading {
+    writing-mode: vertical-rl; /* Sets the text direction vertically */
+    text-orientation: mixed; /* Ensures proper orientation of text */
+    transform: rotate(180deg); /* Rotates the text to start from bottom to top */
+    font-size: 2rem; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+  
+
+
+
+  .responsive-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+  
+  .circular-card {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #4CAF50, #388E3C); /* Gradient effect */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.3); /* 3D shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    user-select: none; /* Prevents text selection */
+  }
+  
+  /* Hover effect to scale the card */
+  .circular-card:hover {
+    transform: scale(1.1);  /* Enlarges the card on hover */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.5); /* Stronger shadow on hover */
+  }
+  
+  /* Active state to give a pressed look */
+  .circular-card:active {
+    transform: scale(1); /* Keeps the card size when clicked */
+    filter: brightness(0.9); /* Darkens the card when clicked */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Inset shadow to give a "pressed" effect */
+  }
+  
+  /* Optional: Adding smooth animation for the cards */
+  @keyframes floatEffect {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .circular-card {
+    animation: floatEffect 2s infinite ease-in-out; /* Floating animation */
+  }
+  
+
+  
+
+  .github-iframe-container {
+    width: 100%;   /* Set the width of the div to 80% of its parent container */
+    height: 100%; /* Set the height to 500px or any desired height */
+    margin: 0 auto; /* Center the div horizontally */
+    bottom: -4300px;
+    right: 300px;
+    display: inline-block; /* Ensures the div takes the width of the content */
+    /* position: relative; */
+  }
+  
+  .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
