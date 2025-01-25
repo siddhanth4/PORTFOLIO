@@ -36,14 +36,7 @@ const Hero = () => {
 
       <ComputersCanvas />
  
-      <div className="github-iframe-container">
-        <iframe
-          src="https://git-skyline.huakun.tech/contribution/github/siddhanth4/embed?year=2024&enableZoom=false"
-          width="100%" /* Set iframe width to 100% of the div */
-          height="100%" /* Set iframe height to 100% of the div */
-          frameBorder="0"
-        ></iframe>
-      </div>
+      
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
