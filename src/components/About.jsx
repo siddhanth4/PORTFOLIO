@@ -51,49 +51,6 @@ const ServiceCard = ({ index, title, icon, url }) => (
 
 
 
-
-// const CircularCards = () => {
-//   const cards = [
-//     { link: 'https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/', image: logo1 },
-//     { link: 'https://github.com/siddhanth4', image: logo2 },
-//     { link: 'https://www.cloudskillsboost.google/public_profiles/29b3d401-7564-42a8-91fa-9dc9c8876548', image: logo3 },
-//     { link: 'https://g.dev/siddhanth_s4', image: logo4 },
-//     { link: 'https://www.instagram.com/siddhanth_s4', image: logo5 },
-//   ];
-
-//   return (
-
-
-//     <div className="cards-container">
-
-//       {cards.map((card, index) => (
-//         <div 
-//           key={index} 
-//           className="circular-card" 
-//           onClick={() => window.open(card.link, '_blank')}
-//           role="button"
-//           tabIndex={0}
-//           onKeyPress={(e) => { if (e.key === 'Enter') window.open(card.link, '_blank'); }}
-//           style={{ textAlign: 'center' }}
-//         >
-//           <img 
-//             src={card.image} 
-//             alt={`Logo ${index + 1}`} 
-//             className="circular-card-image"
-//             style={{ 
-//               width: '100px', 
-//               height: '100px', 
-//               borderRadius: '50%', 
-//               objectFit: 'cover' // Ensures the image fits within the circular frame
-//             }} 
-//           />
-//         </div> 
-//       ))} 
-//     </div>
-//   );
-// };
-
-
 const About = () => {
   return (
     <>
@@ -113,8 +70,7 @@ const About = () => {
         And I continually 🚀 push myself to increase my knowledge and skill set because I enjoy learning new things and challenging myself.
       </motion.p> 
      <br></br>    
-     <br></br>    
-      <div className="main" style={{ display: 'flex', alignItems: 'flex-start' }}>
+     <div className="main" style={{ display: 'flex', alignItems: 'flex-start' }}>
         <div className="vertical-heading-container" style={{ marginRight: '10px' }}>
           <p className="vertical-heading" style={{ display: 'flex', alignItems: 'flex-start', height: '223%' }}>Badges</p>
         </div>
