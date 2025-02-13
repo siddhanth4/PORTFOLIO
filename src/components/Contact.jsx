@@ -23,7 +23,7 @@ import logo5 from '../assets/links/insta.jpeg';
 
 const CircularCards = () => {
   const cards = [
-    { link: 'https://www.linkedin.com/in/siddhanth-kishor-sakhare-159653257/', image: logo1 },
+    { link: 'https://www.linkedin.com/in/siddhanth-sakhare-159653257/', image: logo1 },
     { link: 'https://github.com/siddhanth4', image: logo2 },
     { link: 'https://www.cloudskillsboost.google/public_profiles/29b3d401-7564-42a8-91fa-9dc9c8876548', image: logo3 },
     { link: 'https://g.dev/siddhanth_s4', image: logo4 },
