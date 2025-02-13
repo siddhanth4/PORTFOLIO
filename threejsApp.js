@@ -1,55 +1,50 @@
-// Import necessary Three.js modules
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-let scene, camera, renderer;
+let scene, camera, renderer, controls;
 
 function init() {
-  // Scene setup
   scene = new THREE.Scene();
 
-  // Camera setup (field of view, aspect ratio, near and far planes)
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  let aspect = window.innerWidth / window.innerHeight;
+  camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+  camera.position.set(0, 1, 5); 
 
-  // Renderer setup
-  renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
-  // Add a basic geometry to the scene (cube)
-  const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  // Add cube
+  const geometry = new THREE.BoxGeometry(1, 1, 1);
+  const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
 
-  // Set camera position
-  camera.position.z = 5;
+  // Lights for better rendering
+  const light = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(light);
 
-  // Handle window resizing
+  // OrbitControls for touch gestures
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+
+  // Handle resizing
   window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
-  // Start the animation loop
   animate();
 }
 
-// Animation loop to render the scene
+// Animation loop
 function animate() {
   requestAnimationFrame(animate);
-
-  // Rotate the cube for some animation effect
-  scene.children.forEach(child => {
-    if (child instanceof THREE.Mesh) {
-      child.rotation.x += 0.01;
-      child.rotation.y += 0.01;
-    }
-  });
-
-  // Render the scene
+  controls.update();
   renderer.render(scene, camera);
 }
 
-// Initialize the scene when the document is ready
 init();
