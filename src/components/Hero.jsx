@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import '../VerticalHeading.css'; // Import the CSS file
+import ErrorBoundary from './ErrorBoundary';
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
@@ -34,8 +35,9 @@ const Hero = () => {
       </div>
       
 
-      <ComputersCanvas />
- 
+  <ErrorBoundary>
+    <ComputersCanvas />
+  </ErrorBoundary> 
       
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
