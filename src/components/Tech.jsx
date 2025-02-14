@@ -10,7 +10,7 @@ const Tech = () => {
   return (
     <div className='flex flex-row flex-wrap justify-center gap-10'>
       
-      <motion.div variants={textVariant(0.1, 1.5)}>
+      <motion.div variants={textVariant(0)}>
         <div className='flex flex-row flex-wrap justify-center gap-10'>
           <h2 className={`${styles.sectionHeadText} text-center`}>
             Technologies
