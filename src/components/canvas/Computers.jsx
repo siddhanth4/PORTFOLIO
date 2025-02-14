@@ -20,8 +20,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.5 : 0.75} // Reduced scale for mobile view
-        position={isMobile ? [0, -2.5, -1.5] : [0, -3.25, -1.5]} // Adjusted position
+        scale={isMobile ? 0.45 : 0.7} // Further reduced scale for mobile
+        position={isMobile ? [0, -2.5, -1] : [0, -3.25, -1.5]} // Adjusted position for mobile
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -53,8 +53,8 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{
-        position: isMobile ? [10, 3, 5] : [20, 3, 5], // Adjust camera for mobile view
-        fov: isMobile ? 30 : 25, // Adjust field of view for mobile
+        position: isMobile ? [8, 3, 4] : [20, 3, 5], // Further reduced camera position for mobile
+        fov: isMobile ? 28 : 25, // Slightly tighter field of view for mobile
       }}
       gl={{ preserveDrawingBuffer: true }}
     >
