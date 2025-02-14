@@ -10,13 +10,13 @@ const Tech = () => {
   return (
     <div className='flex flex-row flex-wrap justify-center gap-10'>
       
-      <motion.div variants={textVariant(0)}>
-        <div className='flex flex-row flex-wrap justify-center gap-10'>
-          <h2 className={`${styles.sectionHeadText} text-center`}>
-            Technologies
-          </h2>
+        <div>
+            <div className='flex flex-row flex-wrap justify-center gap-10'>
+              <h2 className={`${styles.sectionHeadText} text-center`}>
+                Technologies
+              </h2>
+            </div>
         </div>
-      </motion.div>
       
       <div className='flex flex-row flex-wrap justify-center gap-10'>
         {technologies.map((technology) => (
