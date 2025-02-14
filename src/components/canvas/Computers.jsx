@@ -20,8 +20,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.5 : 0.75} // Reduced scale for mobile view
+        position={isMobile ? [0, -2.5, -1.5] : [0, -3.25, -1.5]} // Adjusted position
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -32,10 +32,7 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check for screen width <= 530px OR height <= 740px
-    const mediaQuery = window.matchMedia(
-      "(max-width: 530px), (max-height: 740px)"
-    );
+    const mediaQuery = window.matchMedia("(max-width: 780px)");
 
     setIsMobile(mediaQuery.matches);
 
@@ -50,15 +47,15 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  // Do not render the Canvas if isMobile is true
-  if (isMobile) return null;
-
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{
+        position: isMobile ? [10, 3, 5] : [20, 3, 5], // Adjust camera for mobile view
+        fov: isMobile ? 30 : 25, // Adjust field of view for mobile
+      }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
