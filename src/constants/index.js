@@ -34,10 +34,15 @@ import {
   bootstrap,
   mysql,
   ex,
+  mckinsey,
   cefimun,
   paper,
   ehe,
   postman,
+  devp,
+  hp,
+  nvidia,
+  tcs,
 
 } from "../assets";
 
@@ -79,6 +84,11 @@ const services = [
     url: "https://www.credly.com/badges/61b1aeeb-b447-4718-a417-dcfde0ef8fba/public_url",
   },
   {
+    title: "McKinsey.org",
+    icon: mckinsey,
+    url: "https://www.credly.com/badges/a26f88ea-e9f6-4719-aac0-4b9262cdc7e9/public_url",
+  },
+  {
     title: "OPSWAT Academy",
     icon: icip,
     date: "June 2024",
@@ -89,6 +99,7 @@ const services = [
     icon: holopin,
     url: "https://holopin.io/@siddhanth4",
   },
+  
 ];
 
 const technologies = [
@@ -153,19 +164,19 @@ const technologies = [
 
 const experiences = [
   
-  {
-    title: "Internship Trainee",
-    company_name: "Coincent.ai",
-    icon: coincent,
-    iconBg: "#E6DEDD",
-    date: "May 2023 - August 2023",
-    points: [
-      "Acquired knowledge in cybersecurity concepts, basic SQL, and Linux commands.",
-      "Strengthened understanding of penetration testing and ethical hacking methodologies.",
-      "Worked with tools like Linux, Virtual Machines, Metasploit, and Nmap",
-      "Explored cybersecurity tools and techniques to identify and mitigate potential vulnerabilities.",
-    ],
-  },
+  // {
+  //   title: "Internship Trainee",
+  //   company_name: "Coincent.ai",
+  //   icon: coincent,
+  //   iconBg: "#E6DEDD",
+  //   date: "May 2023 - August 2023",
+  //   points: [
+  //     "Acquired knowledge in cybersecurity concepts, basic SQL, and Linux commands.",
+  //     "Strengthened understanding of penetration testing and ethical hacking methodologies.",
+  //     "Worked with tools like Linux, Virtual Machines, Metasploit, and Nmap",
+  //     "Explored cybersecurity tools and techniques to identify and mitigate potential vulnerabilities.",
+  //   ],
+  // },
   
   {
     title: "Full stack Developer Intern",
@@ -182,7 +193,7 @@ const experiences = [
   },
   {
     title: "Project Mentor",
-    company_name: "GirlScript Foundation",
+    company_name: "GirlScript Foundation (GSSoC Extended)",
     icon: gssoc,
     iconBg: "#383E56",
     date: "Oct 2024 - Nov 2024",
@@ -194,10 +205,10 @@ const experiences = [
   },
   {
     title: "Public Relation Coordinator",
-    company_name: "GeeksforGeeks",
+    company_name: "GeeksforGeeks Student Chapter",
     icon: gfgs,
     iconBg: "#383E56",
-    date: "Sept 2024 - Present",
+    date: "Sept 2024 - June 2025",
     points: [
       "Enhancing the student chapter’s visibility and engagement within the college community.",
       "Collaborated with the core team to develop and execute marketing strategies, including social media campaigns and on-campus promotions.",
@@ -223,6 +234,23 @@ const testimonials = [
     name: "POSTMAN", 
     image: postman,
   },
+  {
+    name: "TCS", 
+    image: tcs,
+  },
+  {
+    name: "NVIDIA", 
+    image: nvidia,
+  },
+  {
+    name: "HP", 
+    image: hp,
+  },
+  {
+    name: "DEVP", 
+    image: devp,
+  },
+ 
 ];
 
 const projects = [

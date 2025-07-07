@@ -11,6 +11,7 @@ import microsoft from "./microsoft.png";
 import google from "./google.png";
 import icip from "./icip.png";
 import holopin from "./holopin.png";
+import mckinsey from "./mckinsey2.png";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -44,6 +45,10 @@ import cefimun from "./cefimun.jpg";
 import paper from "./paper.jpg";
 import ehe from "./ehe.jpg";
 import postman from "./postman.jpg";
+import devp from "./devp.jpg";
+import hp from "./hp.jpg";
+import nvidia from "./nvidia.jpg";
+import tcs from "./tcs.jpg";
 
 export {
   logo,
@@ -85,8 +90,14 @@ export {
   icip,
   holopin,
   ex,
+  mckinsey,
   cefimun,
   paper,
   ehe,
   postman,
+  devp,
+  hp,
+  nvidia,
+  tcs,
+
 };
